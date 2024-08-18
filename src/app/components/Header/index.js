@@ -23,14 +23,15 @@ function Header({handleFilter}) {
     }
 
     return (
-        <div className='flex gap-4 items-center'>
-            <div className='flex-1'>
-                <SearchBar
-                    handleSearch={handleMovieSearch}
-                />
+        <>
+            <div className='flex gap-4 items-center'>
+                <div className='flex-1'>
+                    <SearchBar
+                        handleSearch={handleMovieSearch}
+                    />
+                </div>
             </div>
-
-            <div className='flex-1 flex'>
+            <div className='flex-1 flex gap-4 flex-wrap'>
                 <div className='flex'>
                     Type: 
                     <select onChange={handleChange}>
@@ -68,7 +69,7 @@ function Header({handleFilter}) {
                     </select>
                 </div>
             </div>
-        </div>
+        </>
   )
 }
 

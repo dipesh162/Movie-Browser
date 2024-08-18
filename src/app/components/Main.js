@@ -7,13 +7,11 @@ import { fetchMovies } from '../helpers/fetchMovies';
 
 export default function Main({ initialData, initialError, initialQueryParams }) {
     const [filters, setFilters] = useState(initialQueryParams);
-    console.log(initialData)
     const [moviesData, setMoviesData] = useState({ data: initialData.results, error: initialError });
     const observer = useRef();
 
     // Common function to handle setting movies data
     const updateMoviesData = (newData, newError) => {
-        console.log(newData)
         setMoviesData(prev => ({
             data: prev.data.length ? [...prev.data, ...newData] : newData,
             error: newError

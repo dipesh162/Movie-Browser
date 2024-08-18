@@ -28,10 +28,8 @@ export const fetchMovies = async (queryParams) => {
 
     try {
         const response = await axios.get(url.toString());
-        console.log(response);
         return { data: response.data, error: null };
     } catch (error) {
-        console.log(error);
         return { data: null, error: error.message };
     }
 };
