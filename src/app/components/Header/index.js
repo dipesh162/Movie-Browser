@@ -36,7 +36,7 @@ function Header({handleFilter}) {
                     Type: 
                     <select onChange={handleChange}>
                         { typeFilters.map((type,i)=>(
-                            <option name='TYPE' value={type}>{type}</option>
+                            <option key={i} name='TYPE' value={type}>{type}</option>
                         ))
                         }
                     </select>
@@ -45,7 +45,7 @@ function Header({handleFilter}) {
                     Sort: 
                     <select onChange={handleChange}>
                         { sortFilters.map((filter,i)=>(
-                            <option name='SORT' value={filter}>{filter}</option>
+                            <option key={i} name='SORT' value={filter}>{filter}</option>
                         ))
                         }
                     </select>
@@ -54,7 +54,7 @@ function Header({handleFilter}) {
                     Year: 
                     <select onChange={handleChange}>
                         { yearFilters.map((year,i)=>(
-                            <option name='YEAR' value={year}>{year}</option>
+                            <option key={i} name='YEAR' value={year}>{year}</option>
                         ))
                         }
                     </select>
@@ -63,7 +63,7 @@ function Header({handleFilter}) {
                     Genre: 
                     <select onChange={handleChange}>
                         { genresFilters.map((genre,i)=>(
-                            <option name='GENRE_ID' value={genre.id}>{genre.name}</option>
+                            <option key={i} name='GENRE_ID' value={genre.id}>{genre.name}</option>
                         ))
                         }          
                     </select>
