@@ -1,13 +1,20 @@
 import { fetchMovies } from "./helpers/fetchMovies";
 import Main  from "./components/Main";
 
+const initialQueryParams = {
+  PAGE: 1,
+  QUERY: "",
+  TYPE: 'movie',
+  SORT: 'now_playing',
+  YEAR: '2003',
+  GENRE: '',
+  GENRE_ID: [], 
+  RATING_MIN: '4.0', 
+  RATING_MAX: '5.0'
+};
+
 // Server Component
 export default async function Home() {
-  const initialQueryParams = {
-    query: "",
-    type: 'movie',
-    sort: 'now_playing',
-  };
 
   // Fetch data server-side
   const { data, error } = await fetchMovies(initialQueryParams);

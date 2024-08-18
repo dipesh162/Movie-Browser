@@ -2,6 +2,10 @@
 
 import React from 'react'
 import SearchBar from '../SearchBar'
+import genresFilters from '@/app/static/genresFilters'
+import typeFilters from '@/app/static/typeFilters'
+import sortFilters from '@/app/static/sortFilters'
+import yearFilters from '@/app/static/YearFilters'
 
 function Header({handleFilter}) {
 
@@ -12,17 +16,17 @@ function Header({handleFilter}) {
         handleFilter(optionName, optionValue)
     }
 
-    // const handleSort = (e) =>{
-    //     const selectedOption = e.target.selectedOptions[0]
-    //     const optionName = selectedOption.getAttribute('value')
-    //     handleFilter(optionName)
-    // }
+    const handleMovieSearch = (e) =>{
+        const optionValue = e.target.value
+        const optionName = e.target.name
+        handleFilter(optionName,optionValue)
+    }
 
     return (
         <div className='flex gap-4 items-center'>
             <div className='flex-1'>
                 <SearchBar
-                // handleSearch={handleMovieSearch}
+                    handleSearch={handleMovieSearch}
                 />
             </div>
 
@@ -30,17 +34,37 @@ function Header({handleFilter}) {
                 <div className='flex'>
                     Type: 
                     <select onChange={handleChange}>
-                        <option name='type' value='movie'>Movie</option>
-                        <option name='type' value='tv'>TV</option>
+                        { typeFilters.map((type,i)=>(
+                            <option name='TYPE' value={type}>{type}</option>
+                        ))
+                        }
                     </select>
                 </div>
                 <div className='flex'>
                     Sort: 
                     <select onChange={handleChange}>
-                        <option name='sort' value='now_playing'>Now Playing</option>
-                        <option name='sort' value='popular'>Popular</option>               
-                        <option name='sort' value='top_rated'>Top Rated</option>               
-                        <option name='sort' value='upcoming'>Upcoming</option>               
+                        { sortFilters.map((filter,i)=>(
+                            <option name='SORT' value={filter}>{filter}</option>
+                        ))
+                        }
+                    </select>
+                </div>
+                <div className='flex'>
+                    Year: 
+                    <select onChange={handleChange}>
+                        { yearFilters.map((year,i)=>(
+                            <option name='YEAR' value={year}>{year}</option>
+                        ))
+                        }
+                    </select>
+                </div>
+                <div className='flex'>
+                    Genre: 
+                    <select onChange={handleChange}>
+                        { genresFilters.map((genre,i)=>(
+                            <option name='GENRE_ID' value={genre.id}>{genre.name}</option>
+                        ))
+                        }          
                     </select>
                 </div>
             </div>
