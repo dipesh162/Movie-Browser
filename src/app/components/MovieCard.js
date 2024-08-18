@@ -36,4 +36,6 @@ const MovieCard = React.forwardRef(({ movie }, ref) => {
     );
 });
 
+MovieCard.displayName = 'MyComponent';
+
 export default MovieCard;
