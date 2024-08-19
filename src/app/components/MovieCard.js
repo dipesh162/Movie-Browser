@@ -17,7 +17,6 @@ const MovieCard = React.forwardRef(({ movie }, ref) => {
                 <div className="flex items-center gap-1.5 justify-between">
                     <div className="flex gap-2 items-center">
                         <Image
-                            unoptimized
                             src={`/images/star.svg`}
                             alt={'Ratings'}
                             width={20}
