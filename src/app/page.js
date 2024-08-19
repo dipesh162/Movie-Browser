@@ -12,6 +12,11 @@ const initialQueryParams = {
   RATING_MAX: '5.0'
 };
 
+export const metadata = {
+  title: "Movie Browser",
+  description: "Welcome to my movie browser",
+}
+
 // Server Component
 export default async function Home() {
 
