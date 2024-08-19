@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Bookmark from "./Bookmark";
 import React from 'react';
+import star from '../../../public/Images/star.svg'
+
 
 const MovieCard = React.forwardRef(({ movie }, ref) => {
     return (
@@ -17,7 +19,7 @@ const MovieCard = React.forwardRef(({ movie }, ref) => {
                 <div className="flex items-center gap-1.5 justify-between">
                     <div className="flex gap-2 items-center">
                         <Image
-                            src={`/images/star.svg`}
+                            src={star}
                             alt={'Ratings'}
                             width={20}
                             height={20}
