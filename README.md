@@ -40,17 +40,24 @@ If you're using npm:
    ```bash
    npm install
 
+### Running the Application
+   ```bash
+      npm run dev
+   ```
 
 ## Project Overview
+
 ### Features
+- Infinite Scrolling: The application implements infinite scrolling to load more movies as the user scrolls down.
+- Filtering: Users can filter movies based on various criteria, such as Type, Sort, Year, Genre, and Rating. The rating filter includes a dual-slider with markers at 0.5 intervals.
+- Responsive Design: The application is fully responsive and optimized for both desktop and mobile devices.
+
+
 ### Technologies Used
-### Directory Structure
-movie-browsing-app/
-├── components/ # Reusable components
-├── pages/ # Next.js pages (routes)
-├── public/ # Static assets
-├── styles/ # Global and component-specific styles
-└── package.json # Project metadata and scripts
+- Next.js 14 : For server-side rendering and static site generation.
+- React: For building the user interface.
+- Tailwind CSS: For styling the application with utility-first CSS.
+
 
 
 
