@@ -33,61 +33,12 @@ Make sure you have the following installed on your system:
 
    ```bash
    git clone https://github.com/dipesh162/Movie-Browser.git
-Navigate to the project directory:
 
-Install the dependencies:
+2. **Navigate to the project directory:**
 
+3. **Install the dependencies:**
 If you're using npm:
 
-bash
-Copy code
-npm install
-Or, if you're using yarn:
+   ```bash
+   npm install
 
-bash
-Copy code
-yarn install
-Running the Application
-Start the development server:
-
-If you're using npm:
-
-bash
-Copy code
-npm run dev
-Or, if you're using yarn:
-
-bash
-Copy code
-yarn dev
-Open your browser and visit:
-
-arduino
-Copy code
-http://localhost:3000
-The application should now be running on your local machine.
-
-Project Overview
-Features
-Infinite Scrolling: The application implements infinite scrolling to load more movies as the user scrolls down.
-Filtering: Users can filter movies based on various criteria, such as Type, Sort, Year, Genre, and Rating. The rating filter includes a dual-slider with markers at 0.5 intervals.
-Responsive Design: The application is fully responsive and optimized for both desktop and mobile devices.
-Technologies Used
-Next.js 14: For server-side rendering and static site generation.
-React: For building the user interface.
-Tailwind CSS: For styling the application with utility-first CSS.
-Directory Structure
-php
-Copy code
-movie-browsing-app/
-├── components/         # Reusable components
-├── pages/              # Next.js pages (routes)
-├── public/             # Static assets
-├── styles/             # Global and component-specific styles
-└── package.json        # Project metadata and scripts
-Custom Implementation Notes
-Client and Server Components: The project separates client-side and server-side logic into different files for clarity.
-No Third-Party Libraries for Infinite Scrolling: Infinite scrolling is implemented natively without third-party libraries.
-Direct Data Storage: Movie data is stored directly without nesting under data.results to simplify data handling.
-Contributing
-If you would like to contribute to this project, please fork the repository and create a pull request with your changes.
