@@ -2,7 +2,7 @@ Live link: https://movie-browser-dipesh162.vercel.app/
 
 # Movie Browsing Web Application
 
-A responsive and feature-rich movie browsing application built using Next.js 13. This application allows users to explore various movies with infinite scrolling, apply filters like Type, Sort, Year, Genre, and Rating, and view detailed information about each movie.
+A responsive and feature-rich movie browsing application built using Next.js 14. This application allows users to explore various movies with infinite scrolling, apply filters like Type, Sort, Year, Genre, and Rating, and view detailed information about each movie.
 
 ## Table of Contents
 
@@ -14,8 +14,6 @@ A responsive and feature-rich movie browsing application built using Next.js 13.
   - [Features](#features)
   - [Technologies Used](#technologies-used)
   - [Directory Structure](#directory-structure)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Getting Started
 
@@ -41,4 +39,18 @@ If you're using npm:
 
    ```bash
    npm install
+
+
+## Project Overview
+### Features
+### Technologies Used
+### Directory Structure
+movie-browsing-app/
+├── components/ # Reusable components
+├── pages/ # Next.js pages (routes)
+├── public/ # Static assets
+├── styles/ # Global and component-specific styles
+└── package.json # Project metadata and scripts
+
+
 
