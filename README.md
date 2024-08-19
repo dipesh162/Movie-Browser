@@ -32,12 +32,9 @@ Make sure you have the following installed on your system:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/movie-browsing-app.git
+   git clone https://github.com/dipesh162/Movie-Browser.git
 Navigate to the project directory:
 
-bash
-Copy code
-cd movie-browsing-app
 Install the dependencies:
 
 If you're using npm:
@@ -74,13 +71,11 @@ Project Overview
 Features
 Infinite Scrolling: The application implements infinite scrolling to load more movies as the user scrolls down.
 Filtering: Users can filter movies based on various criteria, such as Type, Sort, Year, Genre, and Rating. The rating filter includes a dual-slider with markers at 0.5 intervals.
-Movie Details: Clicking on a movie opens a detailed view with more information about the movie.
 Responsive Design: The application is fully responsive and optimized for both desktop and mobile devices.
 Technologies Used
-Next.js 13: For server-side rendering and static site generation.
+Next.js 14: For server-side rendering and static site generation.
 React: For building the user interface.
 Tailwind CSS: For styling the application with utility-first CSS.
-TypeScript: For type-safe JavaScript code.
 Directory Structure
 php
 Copy code
@@ -89,7 +84,6 @@ movie-browsing-app/
 ├── pages/              # Next.js pages (routes)
 ├── public/             # Static assets
 ├── styles/             # Global and component-specific styles
-├── utils/              # Utility functions
 └── package.json        # Project metadata and scripts
 Custom Implementation Notes
 Client and Server Components: The project separates client-side and server-side logic into different files for clarity.
