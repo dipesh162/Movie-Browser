@@ -69,7 +69,7 @@ export default function Main({ initialData, initialError, initialQueryParams }) 
 
     return (
         <>
-            <Header handleFilter={handleFilterChange} />
+            <Header filters={filters} handleFilter={handleFilterChange} />
             {(!moviesData?.data.length && moviesData?.error) ?
                 <h1>Error Finding Movies</h1> :
                 <MoviesList data={moviesData.data} lastMovieRef={lastMovieRef} />

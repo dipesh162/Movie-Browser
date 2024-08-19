@@ -6,7 +6,7 @@ const initialQueryParams = {
   QUERY: "",
   TYPE: 'movie',
   SORT: 'popular',
-  YEAR: '',
+  YEAR: '2024',
   GENRE_ID: '', 
   RATING_MIN: '4.0', 
   RATING_MAX: '5.0'

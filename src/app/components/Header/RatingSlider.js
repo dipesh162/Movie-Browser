@@ -32,8 +32,8 @@ const RatingSlider = ({ onRatingChange }) => {
     return (
         <div className="slider-container">
             <div className="slider-labels">
-                <label>Min Rating: {minRating.toFixed(1)}</label>
-                <label>Max Rating: {maxRating.toFixed(1)}</label>
+                <label className='font-semibold'>Min Rating: {minRating.toFixed(1)}</label>
+                <label className='font-semibold'>Max Rating: {maxRating.toFixed(1)}</label>
             </div>
             <div className="sliders">
                 <input 
