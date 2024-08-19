@@ -7,6 +7,9 @@ function MoviesList({ data, lastMovieRef }) {
 
     return (
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
+            {!data.length &&
+                <h1 className='text-xl'>No Result</h1>
+            }
             {data.map((movie, i) => {
                 if (data.length === i + 1) {
                     return (

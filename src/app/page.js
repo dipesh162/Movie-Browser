@@ -5,10 +5,9 @@ const initialQueryParams = {
   PAGE: 1,
   QUERY: "",
   TYPE: 'movie',
-  SORT: 'now_playing',
-  YEAR: '2003',
-  GENRE: '',
-  GENRE_ID: [], 
+  SORT: 'popular',
+  YEAR: '',
+  GENRE_ID: '', 
   RATING_MIN: '4.0', 
   RATING_MAX: '5.0'
 };

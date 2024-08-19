@@ -28,7 +28,7 @@ const MovieCard = React.forwardRef(({ movie }, ref) => {
                     <h3 className="font-semibold">{(movie.first_air_date)?.substr(0, 4) || (movie.release_date)?.substr(0, 4)}</h3>
                 </div>
 
-                <h2 className="mt-2 text-xl font-bold line-clamp-2 h-[64px]">{movie.name || movie.title}</h2>
+                <h2 className="mt-2 text-xl font-bold line-clamp-2 h-[62px]">{movie.name || movie.title}</h2>
                 <h4 className="line-clamp-4 h-[96px]">{movie.overview}</h4>
                 <p>{movie.Year}</p>
             </div>

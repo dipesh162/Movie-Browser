@@ -5,6 +5,18 @@ import Header from './Header';
 import MoviesList from './MoviesList';
 import { fetchMovies } from '../helpers/fetchMovies';
 
+const emptyParams = {
+    PAGE: 1,
+    QUERY: "",
+    TYPE: '',
+    SORT: '',
+    YEAR: '',
+    GENRE: '',
+    GENRE_ID: [], 
+    RATING_MIN: '', 
+    RATING_MAX: ''
+  };
+
 export default function Main({ initialData, initialError, initialQueryParams }) {
     const [filters, setFilters] = useState(initialQueryParams);
     const [moviesData, setMoviesData] = useState({ data: initialData.results, error: initialError });
@@ -13,12 +25,13 @@ export default function Main({ initialData, initialError, initialQueryParams }) 
     // Common function to handle setting movies data
     const updateMoviesData = (newData, newError) => {
         setMoviesData(prev => ({
-            data: prev.data.length ? [...prev.data, ...newData] : newData,
+            data: filters.PAGE > 1 ? [...prev.data , ...newData] : [...newData],
             error: newError
         }));
     };
 
-    const loadMoreMovies = async () => {
+    const loadMoreMovies = async (filters) => {
+
         const { data, error } = await fetchMovies(filters);
         if (data) updateMoviesData(data.results, null);
         if (error) updateMoviesData([], error);
@@ -26,7 +39,7 @@ export default function Main({ initialData, initialError, initialQueryParams }) 
 
     useEffect(() => {
         if (filters.PAGE > 1) {
-            loadMoreMovies();
+            loadMoreMovies(filters);
         }
     }, [filters.PAGE]);
 
@@ -34,12 +47,11 @@ export default function Main({ initialData, initialError, initialQueryParams }) 
         const newQueryParams = {
             ...filters,
             [key]: Array.isArray(val) ? [...filters[key], val] : val,
-            PAGE: '1', // Reset to page 1 when filters change
+            PAGE: 1, // Reset to page 1 when filters change
         };
-
-        const { data, error } = await fetchMovies(newQueryParams);
+   
+        loadMoreMovies(newQueryParams)
         setFilters(newQueryParams);
-        updateMoviesData(data.results, error);
     };
 
     const lastMovieRef = useCallback(
