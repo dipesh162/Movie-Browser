@@ -3,6 +3,7 @@ import withImage from 'next-images'
 
 const nextConfig = {
     images: {
+        disableStaticImages: true,
         remotePatterns: [
             {
                 protocol: 'https',

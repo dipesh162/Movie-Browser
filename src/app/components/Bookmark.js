@@ -2,8 +2,8 @@
 
 import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
-// import imageFilled from '/images/bookmark_filled.png'
-// import imageEmpty from '/images/bookmark_empty.png'
+import imageFilled from '../../../public/Images/bookmark_filled.png'
+import imageEmpty from '../../../public/Images/bookmark_empty.png'
 
 
 function Bookmark({ id }) {
@@ -35,8 +35,8 @@ function Bookmark({ id }) {
             className='cursor-pointer absolute right-0 top-0 z-[1] rounded-bl-xl w-[45px] h-[45px] flex items-center justify-center bg-white'
         >
             <Image
-                src={`/images/${isSaved ? 'bookmark_filled.png' : 'bookmark_empty.png'}`}
-                // src={isSaved ? imageFilled : imageEmpty}
+                // src={`/images/${isSaved ? 'bookmark_filled.png' : 'bookmark_empty.png'}`}
+                src={isSaved ? imageFilled : imageEmpty}
                 width={25}
                 height={25}
                 alt={isSaved ? 'Saved' : 'Not Saved'}
