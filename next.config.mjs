@@ -7,9 +7,8 @@ const nextConfig = {
                 hostname: '**',
             },
         ],
-        domains: ['image.tmdb.org'],
+        domains: ['image.tmdb.org','*.vercel.app',],
     },  
 };
 
-module.exports = nextConfig
-// export default nextConfig;
+export default nextConfig;
