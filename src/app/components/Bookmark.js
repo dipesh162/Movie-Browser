@@ -2,6 +2,9 @@
 
 import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
+// import imageFilled from '/images/bookmark_filled.png'
+// import imageEmpty from '/images/bookmark_empty.png'
+
 
 function Bookmark({ id }) {
     const [isSaved, setSaved] = useState(false);
@@ -33,6 +36,7 @@ function Bookmark({ id }) {
         >
             <Image
                 src={`/images/${isSaved ? 'bookmark_filled.png' : 'bookmark_empty.png'}`}
+                // src={isSaved ? imageFilled : imageEmpty}
                 width={25}
                 height={25}
                 alt={isSaved ? 'Saved' : 'Not Saved'}
