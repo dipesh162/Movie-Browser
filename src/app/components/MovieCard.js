@@ -31,7 +31,7 @@ const MovieCard = React.forwardRef(({ movie }, ref) => {
                 </div>
 
                 <h2 className="mt-2 text-xl font-bold line-clamp-2 h-[62px]">{movie.name || movie.title}</h2>
-                <h4 className="line-clamp-4 h-[96px]">{movie.overview}</h4>
+                {movie.overview && <h4 className="line-clamp-4 h-[96px]">{movie.overview}</h4>}
                 <p>{movie.Year}</p>
             </div>
         </div>

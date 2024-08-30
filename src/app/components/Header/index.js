@@ -30,7 +30,7 @@ function Header({filters, handleFilter}) {
     };
 
     return (
-        <>
+        <nav className='flex flex-col gap-6 sticky top-0 z-[10] bg-white py-4' style={{borderBottom: '1px solid rgba(0, 0, 0, 0.1)'}}>
             <div className='flex gap-4 items-center'>
                 <div className='flex-1'>
                     <SearchBar
@@ -80,7 +80,7 @@ function Header({filters, handleFilter}) {
                 <RatingSlider filters={filters} onRatingChange={handleRatingChange} />
             </div>
 
-        </>
+        </nav>
   )
 }
 

@@ -70,10 +70,12 @@ export default function Main({ initialData, initialError, initialQueryParams }) 
     return (
         <>
             <Header filters={filters} handleFilter={handleFilterChange} />
-            {(!moviesData?.data.length && moviesData?.error) ?
-                <h1>Error Finding Movies</h1> :
-                <MoviesList data={moviesData.data} lastMovieRef={lastMovieRef} />
-            }
+            <div className=' px-3 md:px-6'>
+                {(!moviesData?.data.length && moviesData?.error) ?
+                    <h1>Error Finding Movies</h1> :
+                    <MoviesList data={moviesData.data} lastMovieRef={lastMovieRef} />
+                }
+            </div>
         </>
     );
 }
