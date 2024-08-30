@@ -43,7 +43,7 @@ function Header({filters, handleFilter}) {
                 <div className='flex-1 flex gap-4 flex-wrap'>
                     <div className='flex gap-2 items-center'>
                         <label className='font-semibold' htmlFor="type-filter">Type: </label>
-                        <select className='py-1 px-2 border-[1px] border-gray-400' id="type-filter" value={filters.TYPE ?? 'movie'} onChange={handleChange}>
+                        <select className='cursor-pointer py-1 px-2 border-[1px] border-gray-400' id="type-filter" value={filters.TYPE ?? 'movie'} onChange={handleChange}>
                             {typeFilters.map((type, i) => (
                                 <option key={i} name='TYPE' value={type}>{type}</option>
                             ))}
@@ -52,7 +52,7 @@ function Header({filters, handleFilter}) {
 
                     <div className='flex gap-2 items-center'>
                         <label className='font-semibold' htmlFor="sort-filter">Sort: </label>
-                        <select className='py-1 px-2 border-[1px] border-gray-400' id="sort-filter" value={filters.SORT ?? 'popular'} onChange={handleChange}>
+                        <select className='cursor-pointer py-1 px-2 border-[1px] border-gray-400' id="sort-filter" value={filters.SORT ?? 'popular'} onChange={handleChange}>
                             {sortFilters.map((filter, i) => (
                                 <option key={i} name='SORT' value={filter}>{filter}</option>
                             ))}
@@ -61,7 +61,7 @@ function Header({filters, handleFilter}) {
 
                     <div className='flex gap-2 items-center'>
                         <label className='font-semibold' htmlFor="year-filter">Year: </label>
-                        <select className='py-1 px-2 border-[1px] border-gray-400' id="year-filter" value={filters.YEAR ?? Math.max(...yearFilters)} onChange={handleChange}>
+                        <select className='cursor-pointer py-1 px-2 border-[1px] border-gray-400' id="year-filter" value={filters.YEAR ?? Math.max(...yearFilters)} onChange={handleChange}>
                             {yearFilters.map((year, i) => (
                                 <option key={i} name='YEAR' value={year}>{year}</option>
                             ))}
@@ -70,7 +70,7 @@ function Header({filters, handleFilter}) {
 
                     <div className='flex gap-2 items-center'>
                         <label className='font-semibold' htmlFor="genre-filter">Genre: </label>
-                        <select className='py-1 px-2 border-[1px] border-gray-400' id="genre-filter" value={filters.GENRE_ID ?? 'Action'} onChange={handleChange}>
+                        <select className='cursor-pointer py-1 px-2 border-[1px] border-gray-400' id="genre-filter" value={filters.GENRE_ID ?? 'Action'} onChange={handleChange}>
                             {genresFilters.map((genre, i) => (
                                 <option key={i} name='GENRE_ID' value={genre.id}>{genre.name}</option>
                             ))}
