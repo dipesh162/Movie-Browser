@@ -6,14 +6,14 @@ import star from '../../../public/Images/star.svg'
 
 const MovieCard = React.forwardRef(({ movie }, ref) => {
     return (
-        <div className="border border-gray-300 rounded-2xl relative overflow-hidden " ref={ref}>
+        <div className="border border-gray-300 rounded-2xl relative overflow-hidden h-fit" ref={ref}>
             <Bookmark id={movie.id} />
             <Image
-                src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
+                src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path || movie.poster_path}`}
                 alt={movie.title}
                 width={500}
                 height={500}
-                className="w-full h-auto relative rounded-t-2xl"
+                className="w-full relative rounded-t-2xl"
             />
             <div className="p-4">
                 <div className="flex items-center gap-1.5 justify-between">
